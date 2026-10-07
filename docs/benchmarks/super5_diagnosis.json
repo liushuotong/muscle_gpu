@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "input_sha256": "a5b0738a87351909bafb76a8a56d9c1831a4795f816c4bf4f50c62749c02df1b",
+  "failed_timing_pair": [
+    {
+      "input": "rdrp_first60.fa",
+      "input_sha256": "a5b0738a87351909bafb76a8a56d9c1831a4795f816c4bf4f50c62749c02df1b",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 1,
+      "wall_s": 17.64,
+      "user_s": 69.01,
+      "system_s": 0.24,
+      "max_rss_kib": 201024,
+      "output_sha256": "44b205f132ec61adbe39142fa82ead64bb58d02f7f985cba4697f19f31e30656"
+    },
+    {
+      "input": "rdrp_first60.fa",
+      "input_sha256": "a5b0738a87351909bafb76a8a56d9c1831a4795f816c4bf4f50c62749c02df1b",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 1,
+      "wall_s": 8.58,
+      "user_s": 20.06,
+      "system_s": 0.45,
+      "max_rss_kib": 268480,
+      "output_sha256": "4b86aea75736521cea8cd864256f4782542d9cb7abbbc4368f7fd8004c5f3147"
+    }
+  ],
+  "diagnosis": [
+    {
+      "name": "diag_cpu_a",
+      "sha256": "b32e024cac9dafc3ca08cac2883cdbe9bd08d6fd6f509687cfda1aa4418622b0",
+      "partitions": [
+        "super5.uclust.partition:a1d85053ccb0a213063defb0c3bdc8ce5f6154d241f08da743f93e55434e29e0",
+        "super5.eacluster.partition:e38d019b4f342232e079f344ceb85dd095495a9a43613bf2ae256fd8021e9373"
+      ],
+      "stage_counts": {
+        "pair_backend.commit": 0,
+        "super5.uclust": 0,
+        "super5.consensus": 0,
+        "super5.pprog": 0
+      }
+    },
+    {
+      "name": "diag_cpu_b",
+      "sha256": "bb0e8e4aac78a34149f956b75347e7f57815c2aa0ef04056bc5d48ab67e727f1",
+      "partitions": [
+        "super5.uclust.partition:a1d85053ccb0a213063defb0c3bdc8ce5f6154d241f08da743f93e55434e29e0",
+        "super5.eacluster.partition:bf2c370704f2596af53bd27da859af4232dbb415a7599e404a73db1f75064666"
+      ],
+      "stage_counts": {
+        "pair_backend.commit": 0,
+        "super5.uclust": 0,
+        "super5.consensus": 0,
+        "super5.pprog": 0
+      }
+    },
+    {
+      "name": "diag_gpu",
+      "sha256": "44b205f132ec61adbe39142fa82ead64bb58d02f7f985cba4697f19f31e30656",
+      "partitions": [
+        "super5.uclust.partition:a1d85053ccb0a213063defb0c3bdc8ce5f6154d241f08da743f93e55434e29e0",
+        "super5.eacluster.partition:db67862f6fdef2cc16ab183f325dffa458bf7d297c78a08cb7d521bf4e41bfcb"
+      ],
+      "stage_counts": {
+        "pair_backend.commit": 58,
+        "super5.uclust": 59,
+        "super5.consensus": 43,
+        "super5.pprog": 168
+      }
+    }
+  ],
+  "conclusion": "CPU8 reference itself is not reproducible in EACluster; GPU per-pair Post bitwise verification passed, but end-to-end byte equality failed."
+}

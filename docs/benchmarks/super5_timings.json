@@ -1,0 +1,302 @@
+{
+  "schema": 1,
+  "identity": {
+    "performance_binary_sha256": {
+      "muscle": "d06a9dca1365df3fc380d195abfc617994b15eba001033beb1d8f120f23c7cb6",
+      "muscle_gpu": "222a547890e8cd01d010e4d2f957b504a24ba086e29efe4bdf55ceb529324b3e"
+    },
+    "final_help_ctest_update_binary_sha256": {
+      "muscle": "582d657cd999f4dfeff341b45c7e95ad799b5d180b790f93c9b01f49c4139a76",
+      "muscle_gpu": "3aa4da64aca78a1b457db1cd7935b01ac2d129358b9cd791e1f88b296db112e4"
+    },
+    "toolchain": "build_type=Release\ncxx_compiler=$CONDA_PREFIX/bin/x86_64-conda-linux-gnu-c++ 14.3.0\ncxx_flags=-fvisibility-inlines-hidden -fmessage-length=0 -march=x86-64-v2 -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem $CONDA_PREFIX/include  -I$CONDA_PREFIX/targets/x86_64-linux/include -I$CONDA_PREFIX/targets/x86_64-linux/include/cccl \nmuscle_base_flags=-fno-strict-aliasing\nsanitize=OFF\nsanitize_flags=\nstrict_fp=OFF\ncuda=ON\ncuda_compiler=$CONDA_PREFIX/bin/nvcc 13.2.51\ncuda_strict_flags=--fmad=false;--ftz=false;--prec-div=true;--prec-sqrt=true\ncuda_architectures=86\nvcxproj_sha256=80d840bd07e432bdfd3141664bfa561702051c3b306e297df745c8b364433d91\ngitver=archive-R0\n",
+    "note": "Final help/CMake test changes are subsequent to the performance binary; no posterior algorithm code changed."
+  },
+  "runs": [
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 0,
+      "wall_s": 12.78,
+      "user_s": 44.61,
+      "system_s": 0.16,
+      "max_rss_kib": 197820,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": true
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 0,
+      "wall_s": 5.96,
+      "user_s": 13.76,
+      "system_s": 0.42,
+      "max_rss_kib": 288356,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": true
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 1,
+      "wall_s": 12.78,
+      "user_s": 45.71,
+      "system_s": 0.23,
+      "max_rss_kib": 197920,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 1,
+      "wall_s": 5.47,
+      "user_s": 13.3,
+      "system_s": 0.35,
+      "max_rss_kib": 289596,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 2,
+      "wall_s": 12.07,
+      "user_s": 44.15,
+      "system_s": 0.2,
+      "max_rss_kib": 198420,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 2,
+      "wall_s": 5.55,
+      "user_s": 13.01,
+      "system_s": 0.36,
+      "max_rss_kib": 288932,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 3,
+      "wall_s": 13.32,
+      "user_s": 44.7,
+      "system_s": 0.16,
+      "max_rss_kib": 197412,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 3,
+      "wall_s": 5.49,
+      "user_s": 13.38,
+      "system_s": 0.35,
+      "max_rss_kib": 290116,
+      "output_sha256": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "none",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 1,
+      "wall_s": 21.16,
+      "user_s": 108.31,
+      "system_s": 0.21,
+      "max_rss_kib": 209760,
+      "output_sha256": {
+        "none": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+        "abc": "3e9e08a86fe61070dd08b1d0a24d481495730ecc256313913ecce05e17fe84bf",
+        "acb": "c2129f428be9c772cc50640af78b8064ec0a371026ca1f50315eb11b99a7e87f",
+        "bca": "8629c03767904a765617e2a04ceef199211dab4a3fcb377b05ad1832f8a13549"
+      },
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "all",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 1,
+      "wall_s": 11.06,
+      "user_s": 18.61,
+      "system_s": 0.39,
+      "max_rss_kib": 289668,
+      "output_sha256": {
+        "none": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+        "abc": "3e9e08a86fe61070dd08b1d0a24d481495730ecc256313913ecce05e17fe84bf",
+        "acb": "c2129f428be9c772cc50640af78b8064ec0a371026ca1f50315eb11b99a7e87f",
+        "bca": "8629c03767904a765617e2a04ceef199211dab4a3fcb377b05ad1832f8a13549"
+      },
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "all",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 2,
+      "wall_s": 21.07,
+      "user_s": 105.28,
+      "system_s": 0.26,
+      "max_rss_kib": 210116,
+      "output_sha256": {
+        "none": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+        "abc": "3e9e08a86fe61070dd08b1d0a24d481495730ecc256313913ecce05e17fe84bf",
+        "acb": "c2129f428be9c772cc50640af78b8064ec0a371026ca1f50315eb11b99a7e87f",
+        "bca": "8629c03767904a765617e2a04ceef199211dab4a3fcb377b05ad1832f8a13549"
+      },
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "all",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 2,
+      "wall_s": 10.31,
+      "user_s": 17.74,
+      "system_s": 0.37,
+      "max_rss_kib": 290292,
+      "output_sha256": {
+        "none": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+        "abc": "3e9e08a86fe61070dd08b1d0a24d481495730ecc256313913ecce05e17fe84bf",
+        "acb": "c2129f428be9c772cc50640af78b8064ec0a371026ca1f50315eb11b99a7e87f",
+        "bca": "8629c03767904a765617e2a04ceef199211dab4a3fcb377b05ad1832f8a13549"
+      },
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "all",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "cpu",
+      "threads": 8,
+      "rep": 3,
+      "wall_s": 20.25,
+      "user_s": 103.29,
+      "system_s": 0.2,
+      "max_rss_kib": 212396,
+      "output_sha256": {
+        "none": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+        "abc": "3e9e08a86fe61070dd08b1d0a24d481495730ecc256313913ecce05e17fe84bf",
+        "acb": "c2129f428be9c772cc50640af78b8064ec0a371026ca1f50315eb11b99a7e87f",
+        "bca": "8629c03767904a765617e2a04ceef199211dab4a3fcb377b05ad1832f8a13549"
+      },
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "all",
+      "warmup_or_pilot": false
+    },
+    {
+      "input": "rdrp_first48.fa",
+      "input_sha256": "618979738ce1052f9476748db759ae428c08470a804c151171a818aa738144df",
+      "backend": "gpu",
+      "threads": 8,
+      "rep": 3,
+      "wall_s": 10.73,
+      "user_s": 18.23,
+      "system_s": 0.39,
+      "max_rss_kib": 290356,
+      "output_sha256": {
+        "none": "13f11fc260b00951094cdc5dcafe62f5be2ad25cf304812d904e0c50261a42a9",
+        "abc": "3e9e08a86fe61070dd08b1d0a24d481495730ecc256313913ecce05e17fe84bf",
+        "acb": "c2129f428be9c772cc50640af78b8064ec0a371026ca1f50315eb11b99a7e87f",
+        "bca": "8629c03767904a765617e2a04ceef199211dab4a3fcb377b05ad1832f8a13549"
+      },
+      "perturb": 1,
+      "randseed": 1,
+      "perm": "all",
+      "warmup_or_pilot": false
+    }
+  ],
+  "summary_20s": {
+    "input": "rdrp_first48.fa",
+    "seq_count": 48,
+    "perm": "all",
+    "cpu8_times": [
+      21.16,
+      21.07,
+      20.25
+    ],
+    "gpu8_times": [
+      11.06,
+      10.31,
+      10.73
+    ],
+    "cpu8_median": 21.07,
+    "gpu8_median": 10.73,
+    "speedup": 1.9636533084808947,
+    "byte_equal": true
+  },
+  "finish_checks": {
+    "default_super5_cuda_byte_equal": true,
+    "resource_fallback_byte_equal": true,
+    "super4_smoke_byte_equal": true,
+    "super5_cuda_memcheck_errors": 0,
+    "cpu_ctest_pass": true,
+    "cpu4_screen_wall_s": 34.35,
+    "cpu4_screen_user_s": 104.95,
+    "cpu4_screen_system_s": 0.15,
+    "cpu4_screen_rss_kib": 117696,
+    "cpu4_screen_output_equal_cpu8": true
+  }
+}

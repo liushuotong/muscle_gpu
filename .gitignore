@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.pyc
+/build/
+/.tools/
+/tmp/
+/dist/
+*.pdf
+/results/
+/HANDOFF_AI.md
+/IMPLEMENTATION_STATUS.md
+/planning/
+/planning/evidence/preflight.json
+/planning/evidence/input_inventory.json
+/planning/tools/remote.sh
+/planning/tools/deploy_sync.sh
+
+# Keep public, reproducible timing evidence under docs/benchmarks/.
+# Operational records contain private server paths/addresses and stay local.

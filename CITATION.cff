@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the original MUSCLE5 method when using this derived CUDA implementation; acknowledge this repository separately."
+type: software
+title: "muscle_gpu: CUDA posterior acceleration for MUSCLE5"
+license: GPL-3.0-only
+repository-code: "https://github.com/liushuotong/muscle_gpu"
+authors:
+  - name: "muscle_gpu contributors"
+preferred-citation:
+  type: article
+  title: "Muscle5: High-accuracy alignment ensembles enable unbiased assessments of sequence homology and phylogeny"
+  authors:
+    - family-names: Edgar
+      given-names: Robert C.
+  journal: Nature Communications
+  volume: 13
+  start: "6968"
+  year: 2022
+  doi: "10.1038/s41467-022-34630-w"

@@ -1,0 +1,11 @@
+# Modification and attribution notice
+
+This distribution is a modified version of MUSCLE by Robert C. Edgar. Original copyright notices, the upstream README and the unmodified GNU GPLv3 license text are retained in `muscle/`. The project is distributed under GPLv3, without warranty. It does not imply approval, certification or endorsement by the upstream author.
+
+Modifications dated 2026-10-08 include CMake/OpenMP/CUDA build support, five-state CUDA Pair-HMM kernels, backend snapshots/scheduling/dispatch, correctness tools, trace support and the `muscle_gpu` executable. The upstream parameter parser and commands are reused. `muscle_gpu` changes default backend selection for `-align`, `-super5` and `-super4`, while the `muscle` executable retains CPU defaults.
+
+The originally supplied archive is identified by `docs/provenance/source_manifest.sha256` (retained in the public package), SHA-256 `ba8726a1c5a34823711c0b4465d0887ac4be7e9035f27ec6b4ea0f97c6c4d222`. No original Git commit is available. The historical tested tree digest was `5d027771601673490e3b8f2dd67f895a719cb075fee803cd508c802d11aafbba`. New release-preparation changes are subsequent to that tested tree; historical timings must not be represented as measurements of a newly compiled binary.
+
+Modified upstream files: `muscle/src/mpcflat.cpp` (backend/trace hook), `muscle/src/myopts.h` (optional backend controls), `muscle/src/help.h` (controls documentation), and `muscle/src/main.cpp` (conditional frontend default). Super5 changes additionally modify `uclust.cpp` (ordered candidate batching), `eadistmx.cpp` (consensus batch), `getpostpairsalignedflat.cpp` (sampled posterior batches), `super5.cpp`/`super4.cpp` (initialization), and `eacluster.cpp` (partition tracing only). The adapter is `src/gpu/super5_adapter.cpp`/`.h`. Clustering heuristics and random sampling are retained. The original copyright in `muscle/src/myutils.cpp` remains intact. Newly introduced GPU/build/test tooling is identified by its source comments and this notice.
+
+GPL source publication requirements: https://www.gnu.org/licenses/gpl-3.0.html (sections 4–6). Preserve upstream notices, identify modifications and dates, retain the GPL license, and make corresponding source/build material available when distributing binaries. Do not describe this fork as officially certified.

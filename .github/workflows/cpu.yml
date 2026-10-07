@@ -1,0 +1,15 @@
+name: CPU compatibility
+on: [push, pull_request]
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S muscle -B build/cpu -DMUSCLE_CUDA=OFF -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build/cpu --parallel 2
+      - run: ctest --test-dir build/cpu --output-on-failure
+      - name: Check drop-in CPU-only frontend
+        run: |
+          build/cpu/muscle -align muscle/tests/fixtures/tiny3.fa -output build/cpu/ref.afa -threads 2
+          build/cpu/muscle_gpu -align muscle/tests/fixtures/tiny3.fa -output build/cpu/gpu_name.afa -threads 2
+          cmp build/cpu/ref.afa build/cpu/gpu_name.afa

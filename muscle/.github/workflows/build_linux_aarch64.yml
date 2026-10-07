@@ -1,0 +1,43 @@
+name: build_linux_aarch64
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read    
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-aarch64:
+    name: Linux aarch64
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Build
+      uses: uraimo/run-on-arch-action@v2
+      with:
+        arch: aarch64
+        distro: ubuntu20.04
+        githubToken: ${{ github.token }}
+        dockerRunArgs: |
+          --volume "${PWD}:/muscle"
+        install: |
+          apt-get update -q -y
+          apt-get install -q -y make g++ file git python3 curl
+        run: |
+          git config --global --add safe.directory /muscle
+          cd /muscle/src
+          curl -fsSL https://raw.githubusercontent.com/rcedgar/vcxproj_make/806d016/vcxproj_make.py > vcxproj_make.py
+          chmod +x vcxproj_make.py
+          ./vcxproj_make.py --openmp
+
+    - name: Upload binary artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: muscle-linux-aarch64
+        path: /home/runner/work/muscle/muscle/bin/muscle
